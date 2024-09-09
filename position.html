@@ -1,0 +1,97 @@
+<!--
+    默认情况下是：
+    position:status; 写不写都是这样
+    position:fixed;它不在占用页面顶部的空间，它漂浮在页面上方
+    top:0px;距离顶部浏览器的距离为0
+    left:0px;距离浏览器左部的距离为0
+
+    当我们设置left:50px;
+             right:50px;时，它会拉伸元素以满足条件;上下也是一样
+
+    给body设置padding-top,使顶部与内容之间有空隙
+
+    position:absolute;
+    是相对于页面，而不是相对于浏览器，因此页面滑动时，absolute也会跟着滑动
+    建立div时，内容出现在其他内容上方，header下面，当设置了position:absolute之后，内容出现在其他内容中，我们可以设置内容的位置
+
+    当我们向下滑动的时候，内容会显示在header上方，这时我们需要设置header的z-index的值为100即可
+
+    当我们将绝对位置放置在固定位置中时，绝对位置的设置都以固定位置的页面为参考，而不是整个浏览器页面
+
+    当我们将绝对位置放置在相对位置中时，绝对位置的设置都以相对位置的页面为参考，而不是整个浏览器
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Position Practice</title>
+</head>
+<body style="
+    height:3000px;
+    padding-top: 60px;
+    padding-left:80px;
+    ">
+    <div style="
+        background-color: black;
+        color:white;
+        position:fixed;
+        top:0px;
+        left:0px;
+        right:0px;
+        height:50px;
+        z-index:100;
+    ">header</div>
+    <div style="
+        background-color: lightgreen;
+        color:white;
+        position:fixed;
+        left:0;
+        bottom:0;
+        top:50px;
+        width:72px;
+    ">sidebar
+        <div style="
+        position:absolute;
+        background-color: red;
+        color:white;
+        top:60px;
+        right:10px;
+    ">
+        absolute
+    </div>
+    </div>
+
+    <div style="
+        position:absolute;
+        background-color: red;
+        color:white;
+        top:60px;
+        right:10px;
+    ">
+        absolute
+    </div>
+
+    <div style="
+        background-color: lightpink;
+        width:200px;
+        height:200px;
+    ">div1</div>
+    <div style="
+         background-color: lightblue;
+        width:200px;
+        height:200px;
+        position:relative;
+    ">div2
+        <div style="
+        position:absolute;
+        background-color: red;
+        color:white;
+        bottom:10px;
+        right:10px;
+    ">
+        absolute
+    </div>
+    </div>
+</body>
+</html>

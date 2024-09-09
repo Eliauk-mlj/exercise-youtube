@@ -1,0 +1,143 @@
+<!--
+   display:flex;  创建一个弹性框
+   flex-direction: row; 将弹性破折号方向设置为行
+
+   justify-content: center;  控制水平放置的位置默认为start,还可以设置为top、end.
+   justify-content: space-between;将元素均匀的分布在水平位置上，并确保每个元素之间有相等的空间
+   align-items: stretch;元素如何垂直对齐，默认是stretch,
+                        还可以设置为start,end,center,此时不会占用全部的空间
+   flex-shrink:0;不会随着网页界面的缩小而变小
+
+   width:0;搜索框默认有一个宽度 以至于缩不到最小；
+           我们设置width为0，搜索框就会随着网页的缩小而缩到最小
+
+
+
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox Practice</title>
+</head>
+<body style="padding-bottom: 1000px;">
+    <div style="
+        display:flex; 
+        flex-direction: row;
+        
+        ">
+        <div style="background-color: lightblue;">div1 text</div>
+        <div style="background-color: pink;">div2 <p>text</p></div>
+    </div>
+
+    <div style="
+        display:flex; 
+        flex-direction: row;
+        margin-top:30px;
+        
+        ">
+        <div style="background-color: lightblue;
+                    width:100px;
+        ">100px</div>
+        <div style="background-color: pink;
+                    flex:1
+        ">flex:1</div>
+    </div>
+
+
+    <div style="
+        display:flex; 
+        flex-direction: row;
+        margin-top:30px;
+        
+        ">
+        <div style="background-color: lightblue;
+                    width:100px;
+        ">100px</div>
+        <!-- flex:1  意思是占用剩余长度
+             flex:1   flex:2  意思是前者占用剩余的三分之一 后者是三分之二-->
+        <div style="background-color: pink;
+                    flex:1;
+        ">flex:1</div>
+        <div style="background-color: lightblue;
+                    flex:2;
+        ">flex:2</div>
+        
+    </div>
+
+    <div style="
+        margin-top:30px;
+        height:70px;
+        border-style: solid;
+        border-color: gray;
+        border-width: 1px;
+        display:flex; 
+        flex-direction: row;
+        justify-content: center;
+        
+        ">
+        <div style="background-color: lightblue;
+                    width:100px;
+        ">100px</div>
+        <div style="background-color: pink;
+                    width:100px;
+        ">100px</div>
+        <div style="background-color: lightblue;
+                    width:100px;
+        ">100px</div>
+        
+    </div>
+
+    <div style="
+        margin-top:30px;
+        height:70px;
+        border-style: solid;
+        border-color: gray;
+        border-width: 1px;
+        display:flex; 
+        flex-direction: row;
+        justify-content: space-between;
+        
+        ">
+        <div style="background-color: lightblue;
+                    width:100px;
+        ">100px</div>
+        <div style="background-color: pink;
+                    width:100px;
+        ">100px</div>
+        <div style="background-color: lightblue;
+                    width:100px;
+        ">100px</div>
+        
+    </div>
+
+    <div style="
+        margin-top:30px;
+        height:70px;
+        border-style: solid;
+        border-color: gray;
+        border-width: 1px;
+        display:flex; 
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        
+        ">
+        <div style="background-color: lightblue;
+                    width:100px;
+        ">100px</div>
+        <div style="background-color: pink;
+                    width:100px;
+        ">100px</div>
+        <div style="background-color: lightblue;
+                    width:100px;
+        ">100px</div>
+        
+    </div>
+    
+    
+</body>
+</html>

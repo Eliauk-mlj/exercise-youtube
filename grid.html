@@ -1,0 +1,95 @@
+<!--style的三种方式：
+        1.内联：是在div中直接写style
+        2.嵌入：是在head中写<style></style>
+        3.外联：是在css文件中写
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Practice</title>
+</head>
+<body style="padding-bottom: 1000px;">
+    <div style="
+        display:grid;
+        grid-template-columns: 100px 100px;   
+        
+    ">
+        <div style="background-color: orangered;">div 1</div>
+        <div style="background-color: pink;">
+            div 2
+            <p>
+                text
+            </p>
+        </div>
+    </div>
+
+    <div style="
+        display:grid;
+        grid-template-columns: 100px 100px 200px;
+        margin-top: 20px;
+        
+    ">
+        <div style="background-color: orangered;">100px</div>
+        <div style="background-color: pink;">
+            100px
+            <p>
+                text
+            </p>
+        </div>
+        <div style="background-color: rgb(80, 219, 238);">
+            200px
+        </div>
+        <div style="background-color: pink;">
+            100px
+        </div>
+
+    </div>
+
+
+    <!--1fr的意思是代表自由空间，占用这个网格剩余的空间-->
+    <div style="
+        display:grid;
+        grid-template-columns: 100px 1fr;
+        margin-top: 20px;
+        
+    ">
+        <div style="background-color: orangered;">100px</div>
+        <div style="background-color: pink;">1fr</div>
+    </div>
+
+    <!--两个1fr均分网格剩余的空间
+        1fr 2fr 前者占用剩余网格的1/3，后者占用剩余网格的2/3
+    -->
+    <div style="
+        display:grid;
+        grid-template-columns: 100px 1fr 2fr;
+        margin-top: 20px;
+        
+    ">
+        <div style="background-color: orangered;">100px</div>
+        <div style="background-color: pink;">1fr</div>
+        <div style="background-color: purple;">2fr</div>
+    </div>
+
+    <div style="
+        display:grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        margin-top: 20px;
+        column-gap: 20px;
+        row-gap: 40px;
+        
+    ">
+        <div style="background-color: orangered;height:200px;">1fr</div>
+        <div style="background-color: pink;height:200px;">1fr</div>
+        <div style="background-color: purple;height:200px;">1fr</div>
+        <div style="background-color: purple;height:200px;">1fr</div>
+        <div style="background-color: orangered;height:200px;">1fr</div>
+        <div style="background-color: pink;height:200px;">1fr</div>
+    </div>
+
+</body>
+</html>
